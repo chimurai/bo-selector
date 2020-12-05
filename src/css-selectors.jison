@@ -5,7 +5,7 @@
 
 %%
 'n'                      return 'n';
-[_a-zA-Z][_a-zA-Z0-9-]*  return 'IDENT';
+[_a-zA-Z -￿][-_a-zA-Z0-9 -￿]*  return 'IDENT';
 <<EOF>>                  return 'EOF';
 \~\=                     return 'CONTAINS_WORD';
 \*\=                     return 'CONTAINS';
